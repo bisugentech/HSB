@@ -6,10 +6,10 @@ import cors from "cors";
 import mysql from "mysql2/promise";
 
 const db = await mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "Root",   // your MySQL password
-  database: "medical_app"
+  host: "http://srv684.hstgr.io",
+  user: "HA",
+  password: "Shreyas@1234%",   // your MySQL password
+  database: "HAB_practo"
 });
 
 dotenv.config();
@@ -196,6 +196,6 @@ app.post("/get-booked-slots", async (req, res) => {
 /* START SERVER */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
-  console.log(`✅ Server running at http://localhost:${PORT}`)
+  console.log(`✅ Server running at https://hsb-black.vercel.app/`)
 );
 export default app;
